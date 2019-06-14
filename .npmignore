@@ -1,0 +1,11 @@
+### Directories
+src
+demo
+dist
+/develop
+
+### Files
+.babelrc
+webpack.config.js
+tsconfig.json
+tslint.json

@@ -1,0 +1,45 @@
+{
+  "name": "angular-breadcrumbs-light",
+  "version": "1.0.0",
+  "description": "Angular Breadcrumbs customizable and easy to use component & service",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "dev": "cd develop && npm start",
+    "lint": "tslint -p tsconfig.json",
+    "demo": "cd demo && npm start",
+    "build": "rm -rf lib && webpack",
+    "deploy": "cd demo && npm run deploy",
+    "release": "npm run build && npm publish"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@types/node": "12.0.4",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^2.1.1",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "ts-loader": "^6.0.2",
+    "tslint": "^5.17.0",
+    "typescript": "^3.5.1",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^3.2.1"
+  },
+  "keywords": [
+    "Angular",
+    "Breadcrumbs",
+    "angular-breadcrumbs"
+  ],
+  "author": "Daniil Moroz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mopcweb/angular-breadcrumbs-light"
+  },
+  "homepage": "https://mopcweb.github.io/angular-breadcrumbs-light"
+}
