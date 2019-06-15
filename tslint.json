@@ -56,7 +56,7 @@
   "rulesDirectory": [],
   "linterOptions": {
     "exclude": [
-      "client"
+      "**/*.spec*"
     ]
   }
 }
