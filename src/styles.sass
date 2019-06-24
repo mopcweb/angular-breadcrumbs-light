@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* ------------------------------------------------------------------- */
+/*                            Variables
+/* ------------------------------------------------------------------- */
+
+@import './app/utils/variables'
+
+/* ------------------------------------------------------------------- */
+/*                            Normalize
+/* ------------------------------------------------------------------- */
+
+html, body
+  margin: 0
+  padding: 0
+  width: 100%
+  height: 100%
+
+body
+  overflow-x: hidden !important
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif
+  -webkit-font-smoothing: antialiased
+  background-color: $light
+  color: $dark
+
+  *
+    box-sizing: border-box
+
+    &:focus
+      outline: none
+
+/* ------------------------------------------------------------------- */
+/*                              Root
+/* ------------------------------------------------------------------- */
+
+#root
+  width: 100%
+  height: 100%
+
+/* ------------------------------------------------------------------- */
+/*                             Wrapper
+/* ------------------------------------------------------------------- */
+
+.Wrapper
+  margin: 0 auto
+  padding: $padding
+  width: 100%
+  max-width: 2300px
+  height: calc(100% - 40px)
+
+  @media screen and (max-width: 768px)
+    padding: $padding 5px
+
+/* ------------------------------------------------------------------- */
+/*                              Alert
+/* ------------------------------------------------------------------- */
+
+.Alert
+  width: auto
+  max-width: 95% !important
+
+  .mat-button-wrapper
+    color: $light
+
+  &_ok
+    background-color: mat-color($alert-ok)
+
+  &_info
+    background-color: mat-color($alert-info)
+
+  &_warn
+    background-color: mat-color($alert-warn)
+
+  &_error
+    background-color: mat-color($alert-error)

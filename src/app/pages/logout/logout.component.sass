@@ -1,0 +1,33 @@
+/* ------------------------------------------------------------------- */
+/*                            Variables
+/* ------------------------------------------------------------------- */
+
+@import '../../utils/variables'
+
+/* ------------------------------------------------------------------- */
+/*                             Logout
+/* ------------------------------------------------------------------- */
+
+.Logout
+  width: 100%
+  height: 100%
+  background-color: $lightdark
+
+  &-Main
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: calc(100% - 64px)
+
+    @media screen and (max-width: 600px)
+      height: calc(100% - 56px)
+
+  &-Btn
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 200px
+    height: 50px
+    background: $primary
+    color: $light

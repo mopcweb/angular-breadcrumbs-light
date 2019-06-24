@@ -1,0 +1,119 @@
+<div class="Dashboard">
+
+  <!---------------------------------------------------------------------->
+  <!--                            Header
+  <!---------------------------------------------------------------------->
+
+  <mat-toolbar color="primary" class="Header">
+
+    <!---------------------------------------------------------------------->
+    <!--                      Nav openner & Title
+    <!---------------------------------------------------------------------->
+
+    <div class="Header-Tools">
+      <mat-icon
+        color='primary'
+        class="Openner"
+        matRipple
+        matRippleCentered="true"
+        (click)="drawer.toggle()"
+      >
+        menu
+      </mat-icon>
+
+      <span>Welcome to New Angular App</span>
+    </div>
+
+    <!---------------------------------------------------------------------->
+    <!--                             User
+    <!---------------------------------------------------------------------->
+
+    <div class="Header-User">
+      <button mat-icon-button class="Toolbar-Btn" [matMenuTriggerFor]="menu">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+
+      <mat-menu #menu="matMenu">
+        <span class="UserName">Welcome back, {{ username }}</span>
+
+        <button mat-menu-item [routerLink]="profile">
+          <mat-icon>person</mat-icon>
+          <span>Edit profile</span>
+        </button>
+
+        <button mat-menu-item (click)="user.logOut(true)">
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+
+  <!---------------------------------------------------------------------->
+  <!--                             Main
+  <!---------------------------------------------------------------------->
+
+  <mat-sidenav-container class="Main">
+
+    <!---------------------------------------------------------------------->
+    <!--                             Nav
+    <!---------------------------------------------------------------------->
+
+    <mat-sidenav
+      #drawer
+      class="Nav"
+      mode="side"
+      fixedInViewport='true'
+      opened="true"
+    >
+      <div class="Nav-List">
+        <a mat-button
+          class="Nav-Link"
+          *ngFor="let route of routes"
+          [routerLink]="route.link"
+          routerLinkActive="Nav-Link_active"
+          [routerLinkActiveOptions]="{exact: true}"
+        >
+          <span
+            [class]="'Nav-Icon' + (route.iconClass ? ' ' + route.iconClass : '')"
+          >
+            {{ route.icon }}
+          </span>
+          {{ route.title }}
+        </a>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div class="Nav-Tools">
+        <a mat-button class="Nav-Link" (click)="user.logOut(true)">
+          <mat-icon class="Nav-Icon">exit_to_app</mat-icon>
+          Log out
+        </a>
+      </div>
+    </mat-sidenav>
+
+    <!---------------------------------------------------------------------->
+    <!--                          Breadcrumbs
+    <!---------------------------------------------------------------------->
+
+    <app-breadcrumbs
+      [routes]="routes"
+      noTitlesOnMobile="true"
+      separator="keyboard_arrow_right"
+      separatorClass="material-icons"
+      notFoundTitle="Fuck off"
+      notFoundIcon="not_listed_location"
+      notFoundIconClass="material-icons"
+    >
+    </app-breadcrumbs>
+
+    <!---------------------------------------------------------------------->
+    <!--                            Router
+    <!---------------------------------------------------------------------->
+
+    <div class="Wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-container>
+</div>

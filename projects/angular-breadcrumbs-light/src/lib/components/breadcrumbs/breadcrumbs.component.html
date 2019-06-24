@@ -1,0 +1,71 @@
+<nav
+  [class]="'AngularBreadcrumbsLight ' + (rootCustomClass ? ' ' + rootCustomClass : '')"
+  aria-label="Breadcrumb"
+>
+  <ul
+    [class]="'AngularBreadcrumbsLight-List ' + (listCustomClass ? ' ' + listCustomClass : '')" *ngIf="crumbs.length"
+  >
+    <ng-container *ngFor="let item of crumbs; let i = index">
+      <li>
+
+        <!---------------------------------------------------------------------->
+        <!--                      Link for prev routes
+        <!---------------------------------------------------------------------->
+
+        <a
+          [class]="'AngularBreadcrumbsLight-Link ' + (linkCustomClass ? ' ' + linkCustomClass : '')"
+          *ngIf="i !== crumbs.length - 1"
+          [routerLink]="item.link"
+        >
+          <span
+            *ngIf="icons"
+            [class]="'AngularBreadcrumbsLight-Icon ' + (item.iconClass ? ' ' + item.iconClass : '') + (iconCustomClass ? ' ' + iconCustomClass : '')"
+          >
+            {{ item.icon }}
+          </span>
+          <span
+            *ngIf="titles"
+            [class]="'AngularBreadcrumbsLight-Title ' + (titleCustomClass ? ' ' + titleCustomClass : '') + (!!noTitlesOnMobile ? ' AngularBreadcrumbsLight-Title_hideOnMobile' : '')"
+            style="-webkit-box-orient: vertical"
+          >
+            {{ item.title }}
+          </span>
+        </a>
+
+        <!---------------------------------------------------------------------->
+        <!--                 Disabled link for current route
+        <!---------------------------------------------------------------------->
+
+        <span
+          [class]="'AngularBreadcrumbsLight-Link AngularBreadcrumbsLight-Link_current ' + (currentLinkCustomClass ? ' ' + currentLinkCustomClass : '')"
+          *ngIf="i === crumbs.length - 1"
+        >
+          <span
+            *ngIf="icons"
+            [class]="'AngularBreadcrumbsLight-Icon ' + (item.iconClass ? ' ' + item.iconClass : '') + (iconCustomClass ? ' ' + iconCustomClass : '')"
+          >
+            {{ item.icon }}
+          </span>
+          <span
+            *ngIf="titles"
+            [class]="'AngularBreadcrumbsLight-Title ' + (titleCustomClass ? ' ' + titleCustomClass : '') + (!!noTitlesOnMobile ? ' AngularBreadcrumbsLight-Title_hideOnMobile' : '')"
+            style="-webkit-box-orient: vertical"
+          >
+            {{ item.title }}
+          </span>
+        </span>
+      </li>
+
+      <!---------------------------------------------------------------------->
+      <!--                            Separator
+      <!---------------------------------------------------------------------->
+
+      <li
+        [class]="'AngularBreadcrumbsLight-Separator ' + (separatorClass ? ' ' + separatorClass : '') + (separatorCustomClass ? ' ' + separatorCustomClass : '')"
+        *ngIf="i !== crumbs.length - 1 && crumbs[i + 1].title"
+      >
+        {{ separator ? separator : '/' }}
+      </li>
+    </ng-container>
+  </ul>
+</nav>

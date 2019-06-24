@@ -1,0 +1,21 @@
+{
+  "name": "angular-breadcrumbs-light",
+  "version": "1.0.0",
+  "description": "Angular Breadcrumbs customizable and easy to use component & service",
+  "peerDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0"
+  },
+  "keywords": [
+    "Angular",
+    "Breadcrumbs",
+    "angular-breadcrumbs"
+  ],
+  "author": "Daniil Moroz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mopcweb/angular-breadcrumbs-light"
+  },
+  "homepage": "https://mopcweb.github.io/angular-breadcrumbs-light"
+}

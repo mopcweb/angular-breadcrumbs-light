@@ -1,0 +1,110 @@
+/* ------------------------------------------------------------------- */
+/*                             Variables
+/* ------------------------------------------------------------------- */
+
+@import '../../utils/variables'
+
+/* ------------------------------------------------------------------- */
+/*                             Dashboard
+/* ------------------------------------------------------------------- */
+
+.UserName
+  padding: 12px
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  border-bottom: 1px solid $dark
+
+.Dashboard
+  padding-top: $headerHeight
+  width: 100%
+  height: 100%
+
+  @media screen and (max-width: 599px)
+    padding-top: $headerHeightMobile
+
+  /* ------------------------------------------------------------------- */
+  /*                             Header
+  /* ------------------------------------------------------------------- */
+
+  .Header
+    position: fixed
+    top: 0
+    padding: 0 $padding
+    display: flex
+    justify-content: space-between
+    width: 100%
+    background-color: $dark
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)
+    z-index: 100
+
+    &-Tools
+      display: flex
+      align-items: center
+
+      & > span
+        color: #fcfaf9
+        margin: 0 $margin
+
+        @media screen and (max-width: 599px)
+          display: none
+
+    &-User
+      display: flex
+      align-items: center
+
+  /* ------------------------------------------------------------------- */
+  /*                               Nav
+  /* ------------------------------------------------------------------- */
+
+  .Openner
+    padding: 10px
+    margin-left: -10px
+    width: auto
+    height: auto
+    border-radius: 50%
+    cursor: pointer
+
+  .Nav
+    top: $headerHeight !important
+    width: 250px
+
+    @media screen and (max-width: 599px)
+      top: $headerHeightMobile !important
+
+
+    &-Link
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 10px 0
+      width: 100%
+
+      &_active
+        color: $primary
+
+    &-Icon
+      margin: 0 $margin
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      width: $spacing * 3
+      height: $spacing * 3
+
+  /* ------------------------------------------------------------------- */
+  /*                              Main
+  /* ------------------------------------------------------------------- */
+
+  .Main
+    width: 100%
+    height: 100%
+
+  /* ------------------------------------------------------------------- */
+  /*                             Toolbar
+  /* ------------------------------------------------------------------- */
+
+  .Toolbar
+    height: $breadcrumbsHeight
+    background-color: $lightdark
+    color: $light

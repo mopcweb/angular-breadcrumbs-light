@@ -1,0 +1,52 @@
+<div class="Login">
+
+  <!---------------------------------------------------------------------->
+  <!--                        Login Toolbar
+  <!---------------------------------------------------------------------->
+
+  <mat-toolbar class="Login-Toolbar">
+    Welcome to new Angular App
+  </mat-toolbar>
+
+  <!---------------------------------------------------------------------->
+  <!--                          Login From
+  <!---------------------------------------------------------------------->
+
+  <div class="Login-Wrapper">
+    <div class="Login-Form">
+      <h2>Please, login</h2>
+
+      <mat-form-field class="Login-Field" hintLabel='somemail@mail.com'>
+        <input
+          matInput
+          placeholder="Enter your login"
+          (input)="handleCahnge($event, 'login')"
+          required
+        />
+      </mat-form-field>
+
+      <mat-form-field class="Login-Field" hintLabel="At least 6 symbols">
+        <input
+          matInput
+          placeholder="Enter your password"
+          [type]="show ? 'password' : 'text'"
+          (input)="handleCahnge($event, 'pwd')"
+          required
+        />
+        <mat-icon
+          matSuffix
+          (click)="showHide()">{{show ? 'visibility_off' : 'visibility'}}
+        </mat-icon>
+      </mat-form-field>
+
+      <button
+        class="Login-Button"
+        mat-stroked-button
+        [disabled]="!login || !pwd"
+        (click)="authorize()"
+      >
+        Click
+      </button>
+    </div>
+  </div>
+</div>

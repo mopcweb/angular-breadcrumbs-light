@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "angular-breadcrumbs-light": [
+        "dist/angular-breadcrumbs-light"
+      ],
+      "angular-breadcrumbs-light/*": [
+        "dist/angular-breadcrumbs-light/*"
+      ]
+    }
   }
 }
