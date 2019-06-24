@@ -34,9 +34,9 @@ export class LoginComponent implements OnInit {
   /*                              Vars
   /* ------------------------------------------------------------------- */
 
-  private show = true;
-  private login: string;
-  private pwd: string;
+  public show = true;
+  public login: string;
+  public pwd: string;
 
   /* ------------------------------------------------------------------- */
   /*                           Constructor

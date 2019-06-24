@@ -1,15 +1,16 @@
 {
-  "name": "client",
-  "version": "0.0.0",
+  "name": "ngs-breadcrumbs-light",
+  "version": "1.0.0",
+  "description": "Angular Breadcrumbs customizable and easy to use component & service",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod=true",
+    "build": "ng build AngularBreadcrumbsLight",
     "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
     "lint": "tslint -p tsconfig.json",
-    "release": "npm run build && npm publish"
+    "e2e": "ng e2e",
+    "deploy": "ng build --prod --base-href \"https://mopcweb.github.io/angular-breadcrumbs-light\"",
+    "release": "npm run build && cd dist/angular-breadcrumbs-light && npm publish"
   },
   "private": true,
   "dependencies": {
@@ -37,9 +38,10 @@
     "@angular/cli": "~7.3.9",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
+    "angular-cli-ghpages": "^0.5.3",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
@@ -55,5 +57,17 @@
     "tslib": "^1.9.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
-  }
+  },
+  "keywords": [
+    "Angular",
+    "Breadcrumbs",
+    "angular-breadcrumbs"
+  ],
+  "author": "Daniil Moroz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mopcweb/angular-breadcrumbs-light"
+  },
+  "homepage": "https://mopcweb.github.io/angular-breadcrumbs-light"
 }
