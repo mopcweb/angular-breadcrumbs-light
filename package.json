@@ -1,6 +1,6 @@
 {
   "name": "ngx-breadcrumbs-light",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Angular Breadcrumbs customizable and easy to use component & service",
   "scripts": {
     "ng": "ng",
@@ -27,7 +27,7 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
-    "angular-breadcrumbs-light": "^1.0.1",
+    "angular-breadcrumbs-light": "^1.0.2",
     "axios": "^0.19.0",
     "core-js": "^2.5.4",
     "hammerjs": "^2.0.8",
