@@ -14,7 +14,7 @@ import { NgModule } from '@angular/core';
 /* ------------------------------------------------------------------- */
 
 import { CookieService } from 'ngx-cookie-service';
-// import { AngularBreadcrumbsLightModule } from 'angular-breadcrumbs-light';
+import { AngularBreadcrumbsLightModule } from 'angular-breadcrumbs-light';
 
 /* ------------------------------------------------------------------- */
 /*                           Router & App
@@ -39,7 +39,7 @@ import {
 /*                            Components
 /* ------------------------------------------------------------------- */
 
-import { BreadcrumbsComponent } from './components';
+// import { BreadcrumbsComponent } from './components';
 
 /* ------------------------------------------------------------------- */
 /*                              Pages
@@ -67,7 +67,7 @@ import { AuthService, UserService, AlertService } from './services';
     LoginComponent,
     DashboardComponent,
     HomeComponent,
-    BreadcrumbsComponent,
+    // BreadcrumbsComponent,
     NotFoundComponent,
     SettingsComponent,
     LogoutComponent,
@@ -79,7 +79,7 @@ import { AuthService, UserService, AlertService } from './services';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    // AngularBreadcrumbsLightModule,
+    AngularBreadcrumbsLightModule,
     MatSnackBarModule,
     MatProgressSpinnerModule,
     MatFormFieldModule,
