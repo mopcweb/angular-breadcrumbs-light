@@ -27,6 +27,7 @@ import { home } from '../../utils/routes';
 export class NotFoundComponent implements OnInit {
 
   public home = home;
+  public src = './assets/notFound.jpg';
 
   /* ------------------------------------------------------------------- */
   /*                           Constructor

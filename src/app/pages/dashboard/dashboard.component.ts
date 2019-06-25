@@ -44,7 +44,7 @@ export class DashboardComponent implements OnInit, DoCheck {
   /* ------------------------------------------------------------------- */
 
   public constructor(
-    public user: UserService,
+    public user: UserService
   ) { }
 
   /* ------------------------------------------------------------------- */

@@ -21,7 +21,7 @@
         menu
       </mat-icon>
 
-      <span>Welcome to New Angular App</span>
+      <span>Demo for Angular Breadcrumbs Light</span>
     </div>
 
     <!---------------------------------------------------------------------->
@@ -97,16 +97,16 @@
     <!--                          Breadcrumbs
     <!---------------------------------------------------------------------->
 
-    <app-breadcrumbs
+    <angular-breadcrumbs-light
       [routes]="routes"
+      base='/angular-breadcrumbs-light/'
       noTitlesOnMobile="true"
       separator="keyboard_arrow_right"
       separatorClass="material-icons"
-      notFoundTitle="Fuck off"
       notFoundIcon="not_listed_location"
       notFoundIconClass="material-icons"
     >
-    </app-breadcrumbs>
+    </angular-breadcrumbs-light>
 
     <!---------------------------------------------------------------------->
     <!--                            Router

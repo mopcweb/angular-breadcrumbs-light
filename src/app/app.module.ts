@@ -14,6 +14,7 @@ import { NgModule } from '@angular/core';
 /* ------------------------------------------------------------------- */
 
 import { CookieService } from 'ngx-cookie-service';
+// import { AngularBreadcrumbsLightModule } from 'angular-breadcrumbs-light';
 
 /* ------------------------------------------------------------------- */
 /*                           Router & App
@@ -78,6 +79,7 @@ import { AuthService, UserService, AlertService } from './services';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    // AngularBreadcrumbsLightModule,
     MatSnackBarModule,
     MatProgressSpinnerModule,
     MatFormFieldModule,

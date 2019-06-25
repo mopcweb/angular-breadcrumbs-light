@@ -1,16 +1,19 @@
 {
-  "name": "ngs-breadcrumbs-light",
-  "version": "1.0.0",
+  "name": "ngx-breadcrumbs-light",
+  "version": "1.0.1",
   "description": "Angular Breadcrumbs customizable and easy to use component & service",
   "scripts": {
     "ng": "ng",
+    "copy": ". ./copy.sh",
     "start": "ng serve",
-    "build": "ng build AngularBreadcrumbsLight",
+    "base": "ng serve --base-href=\"/angular-breadcrumbs-light/\"",
+    "build:demo": "ng build --prod --base-href=\"https://mopcweb.github.io/angular-breadcrumbs-light/\"",
+    "build:lib": "npm run copy && ng build AngularBreadcrumbsLight",
     "test": "ng test",
     "lint": "tslint -p tsconfig.json",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href \"https://mopcweb.github.io/angular-breadcrumbs-light\"",
-    "release": "npm run build && cd dist/angular-breadcrumbs-light && npm publish"
+    "deploy": "npm run copy && npm run build:demo && ngh --dir dist/ngx-breadcrumbs-light",
+    "release": "npm run build:lib && cd dist/angular-breadcrumbs-light && npm publish"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +27,7 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "angular-breadcrumbs-light": "^1.0.1",
     "axios": "^0.19.0",
     "core-js": "^2.5.4",
     "hammerjs": "^2.0.8",

@@ -13,17 +13,21 @@ import { Component, OnInit, DoCheck, Input } from '@angular/core';
 // =====> Interfaces
 import {
   AngularBreadcrumbsProps, IAngularRoute, ICustomClasses
-} from '../../interfaces';
+} from '../../interfaces/index';
 
 // =====> Services
-import { BreadcrumbsService } from '../../services';
+import { BreadcrumbsService } from '../../services/breadcrumbs.service';
+
+/* tslint:disable */
 
 // =====> Component config
 @Component({
-  selector: 'app-breadcrumbs',
+  selector: 'angular-breadcrumbs-light',
   styleUrls: ['./breadcrumbs.component.sass'],
   templateUrl: './breadcrumbs.component.html'
 })
+
+/* tslint:enable */
 
 /* ------------------------------------------------------------------- */
 /*                            Component
@@ -52,6 +56,7 @@ export class BreadcrumbsComponent implements OnInit, DoCheck, AngularBreadcrumbs
 
   // =====> Input vars
   @Input() public routes: IAngularRoute[];
+  @Input() public base: string;
   @Input() public separator?: string;
   @Input() public separatorClass?: string;
   @Input() public icons: boolean | string = true;
@@ -104,17 +109,15 @@ export class BreadcrumbsComponent implements OnInit, DoCheck, AngularBreadcrumbs
 
     // Destructure this
     const {
-      routes, location, notFoundTitle, notFoundIcon, notFoundIconClass
+      routes, location, base, notFoundTitle, notFoundIcon, notFoundIconClass
     } = this;
 
     // Get crumbs for this location
     this.crumbs =
       this.breadcrumbs.getBreadcrumbs(
-        routes, location, notFoundTitle, notFoundIcon, notFoundIconClass
+        routes, location, base, notFoundTitle, notFoundIcon,
+        notFoundIconClass
       );
-
-    // Log
-    // console.log('BREADCRUMBS', this.crumbs);
   }
 
   /* ------------------------------------------------------------------- */
