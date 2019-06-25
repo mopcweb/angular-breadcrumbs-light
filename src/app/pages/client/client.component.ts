@@ -23,7 +23,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class ClientComponent implements OnInit {
 
-  public wrong = `${decodeURIComponent(window.location.pathname)}/Some/wrong/route`;
+  public wrong = `Some/wrong/route`;
 
   public constructor() { }
 

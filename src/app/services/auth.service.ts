@@ -18,9 +18,6 @@ import { Observable } from 'rxjs';
 // =====> Services
 import { UserService } from './user.service';
 
-// =====> Env
-import { environment } from '../../environments/environment';
-
 // =====> Config
 import { logout } from '../utils/routes';
 
@@ -48,7 +45,7 @@ export class AuthService implements CanActivate {
   constructor(
     private user: UserService,
     private router: Router
-  ) {}
+  ) { }
 
   /* ------------------------------------------------------------------- */
   /*                              Methods
@@ -67,10 +64,6 @@ export class AuthService implements CanActivate {
 
     // Else navigate to Login page
     this.router.navigate([logout]);
-
-    // If prod -> reload page for initiate AWS login route on server
-    if (environment.production)
-      window.location.reload();
 
     // Return false
     return false;

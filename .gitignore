@@ -1,8 +1,7 @@
 ### Directories
 node_modules
-/lib
+dist
 build
-/develop
 
 ### Files
 .env

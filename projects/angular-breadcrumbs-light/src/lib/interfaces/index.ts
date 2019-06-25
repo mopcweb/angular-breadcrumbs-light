@@ -48,6 +48,7 @@ export interface ICustomClasses {
 
 export interface AngularBreadcrumbsProps {
   routes: IAngularRoute[];
+  base?: string;
   separator?: any;
   separatorClass?: string;
   icons?: boolean | string;

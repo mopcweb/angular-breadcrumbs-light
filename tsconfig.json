@@ -20,9 +20,11 @@
     ],
     "paths": {
       "angular-breadcrumbs-light": [
+        "dist/angular-breadcrumbs-light",
         "dist/angular-breadcrumbs-light"
       ],
       "angular-breadcrumbs-light/*": [
+        "dist/angular-breadcrumbs-light/*",
         "dist/angular-breadcrumbs-light/*"
       ]
     }

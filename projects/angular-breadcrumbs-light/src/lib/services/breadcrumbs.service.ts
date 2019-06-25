@@ -11,7 +11,7 @@ import { Injectable } from '@angular/core';
 /* ------------------------------------------------------------------- */
 
 // =====> Interfaces
-import { IAngularBreadcrumb, IAngularRoute } from '../interfaces';
+import { IAngularBreadcrumb, IAngularRoute } from '../interfaces/index';
 
 // =====> Helpers
 import { HelpersService } from './helpers.service';
@@ -28,12 +28,6 @@ import { HelpersService } from './helpers.service';
 export class BreadcrumbsService {
 
   /* ------------------------------------------------------------------- */
-  /*                              Vars
-  /* ------------------------------------------------------------------- */
-
-
-
-  /* ------------------------------------------------------------------- */
   /*                            Constructor
   /* ------------------------------------------------------------------- */
 
@@ -46,7 +40,7 @@ export class BreadcrumbsService {
   /* ------------------------------------------------------------------- */
 
   public getBreadcrumbs = (
-    routes: IAngularRoute[], fullUrl = window.location.pathname,
+    routes: IAngularRoute[], fullUrl = window.location.pathname, base?: string,
     notFoundTitle?: string, notFoundIcon?: string, notFoundIconClass?: string
   ): IAngularBreadcrumb[] => {
     // Get necessary methods
@@ -55,16 +49,19 @@ export class BreadcrumbsService {
     // Var for array to return
     const breadcrumbs: IAngularBreadcrumb[] = [];
 
+    // If base provided - replace
+    const baseUrl = fullUrl.replace(base, '');
+
     // Remove params
-    const croppedUrl: string = removeParams(decodeURIComponent(fullUrl));
+    const croppedUrl: string = removeParams(decodeURIComponent(baseUrl));
 
     // Root route
     const root = findMin(routes);
 
     // Array of paths
     const paths: string[] = routes[root.index].link[0] === '/'
-      ? fullUrl === '/'
-        ? [fullUrl]
+      ? baseUrl === '/'
+        ? [baseUrl]
         : croppedUrl.split('/')
       : croppedUrl.split('/');
 

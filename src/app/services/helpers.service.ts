@@ -5,7 +5,6 @@
 /* ################################################################### */
 
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 
 /* ------------------------------------------------------------------- */
 /*                             Config
@@ -26,9 +25,7 @@ export class HelpersService {
   /*                           Constructor
   /* ------------------------------------------------------------------- */
 
-  public constructor(
-    private router: Router
-  ) { }
+  public constructor() { }
 
   /* ------------------------------------------------------------------- */
   /*                       Remove params from url
@@ -75,19 +72,5 @@ export class HelpersService {
     // Return
     return { min, index };
   };
-
-  /* ------------------------------------------------------------------- */
-  /*                       Get current route title
-  /* ------------------------------------------------------------------- */
-
-  public routeTitle = () =>
-    decodeURIComponent(this.router.url.replace(/\/.*\//gi, ''))
-
-  /* ------------------------------------------------------------------- */
-  /*                          Get parent path
-  /* ------------------------------------------------------------------- */
-
-  public parentRoute = () =>
-    decodeURIComponent(this.router.url.match(/\/.*\//)[0])
 
 }
