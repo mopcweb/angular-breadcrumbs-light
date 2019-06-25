@@ -1,7 +1,7 @@
 
 # Angular Breadcrumbs Light
 
-[![GitHub version](https://img.shields.io/badge/version-1.1.4-yellow.svg)](https://github.com/mopcweb/angular-breadcrumbs-light/releases) [![npm version](https://img.shields.io/npm/v/angular-breadcrumbs-light.svg)](https://www.npmjs.com/package/angular-breadcrumbs-light) [![GitHub demo](https://img.shields.io/badge/demo-available-green.svg)](https://mopcweb.github.io/angular-breadcrumbs-light) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mopcweb/angular-breadcrumbs-light/blob/master/LICENSE)
+[![GitHub version](https://img.shields.io/badge/version-1.0.2-yellow.svg)](https://github.com/mopcweb/angular-breadcrumbs-light/releases) [![npm version](https://img.shields.io/npm/v/angular-breadcrumbs-light.svg)](https://www.npmjs.com/package/angular-breadcrumbs-light) [![GitHub demo](https://img.shields.io/badge/demo-available-green.svg)](https://mopcweb.github.io/angular-breadcrumbs-light) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mopcweb/angular-breadcrumbs-light/blob/master/LICENSE)
 
 ## Demo
 
